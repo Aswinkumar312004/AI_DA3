@@ -1,0 +1,66 @@
+import random
+
+
+
+def get_fate():
+
+    """Return a random fate from the list."""
+
+    fates = [
+
+        "You will have a surprise encounter soon.",
+
+        "A great opportunity is on the horizon.",
+
+        "Happiness is closer than you think.",
+
+        "Beware of trusting strangers today.",
+
+        "A distant friend will reach out to you soon.",
+
+        "Success is in your near future, but only if you take a chance.",
+
+        "You may face a challenge, but it will make you stronger.",
+
+        "Love is around the corner—keep your heart open.",
+
+        "You will soon find clarity in a confusing situation.",
+
+        "A small act of kindness will lead to a big reward."
+
+    ]
+
+    return random.choice(fates)
+
+
+
+def chatbot():
+
+    print("Hello! I'm FateBot 🔮. Ask me for your fate by typing 'fate', or type 'exit' to quit.")
+
+    while True:
+
+        user_input = input("You: ").lower()
+
+        if user_input == "exit":
+
+            print("FateBot: Farewell! May the stars guide you 🌟.")
+
+            break
+
+        elif user_input == "fate":
+
+            fate = get_fate()
+
+            print(f"FateBot: {fate}")
+
+        else:
+
+            print("FateBot: I can only tell you fates! Type 'fate' for one or 'exit' to quit.")
+
+
+
+# Run the chatbot
+
+chatbot()
+
